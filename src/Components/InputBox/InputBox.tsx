@@ -1,7 +1,8 @@
 import React from 'react';
+import  {onChangeType} from "../App/App"
 
-export default function InputBox(){
+export default function InputBox({onChange}: onChangeType ){
     return(
-        <input></input>
+        <input onChange={onChange}></input>
     )
 }

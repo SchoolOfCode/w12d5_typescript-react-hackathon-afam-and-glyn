@@ -1,13 +1,19 @@
 import React from 'react';
 import InputBox from '../InputBox';
 import SubmitButton from '../SubmitButton';
-import  {onClickType} from "../App/App"
+import  {onChangeType, onClickType} from "../App/App"
+/*
+interface SearchBarProps {
+  onClick : onClickType;
+  onChange: onChangeType
+}
+*/
 
-export default function SearchBar({onClick}: onClickType){
+export default function SearchBar({onClick}: onClickType,{onChange}: onChangeType){
 return(
     <>
-  <InputBox></InputBox> 
-  <SubmitButton onClick={onClick}/>
+  <InputBox onChange={onChange} />
+  <SubmitButton onClick={onClick} />
   </>
 )
 }

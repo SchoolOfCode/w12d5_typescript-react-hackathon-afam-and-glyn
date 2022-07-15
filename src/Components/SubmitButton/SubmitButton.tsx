@@ -8,9 +8,3 @@ export default function SubmitButton({onClick}: onClickType){
     )
 }
 
-/* 
-type AddTodoProps = {addTodo: (newTodoTitle: string) =>void}
-
-export function AddTodo(props: AddTodoProps) {
-  const { addTodo } = props;
- */

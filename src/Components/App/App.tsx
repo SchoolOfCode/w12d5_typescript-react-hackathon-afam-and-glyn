@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from '../SearchBar';
 import ResultsDisplay from '../ResultsDisplay';
 export type onClickType = {onClick: (e: React.MouseEvent<HTMLButtonElement>) => void}
+export type onChangeType = {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void}
 
 function App() {
 const [weatherData, setWeatherData] = useState({})
@@ -40,7 +41,7 @@ fetchData()
       <header className="App-header">
         <h1>Weather Type Script</h1>
       </header>
-      <SearchBar onClick={onClick} />
+      <SearchBar onClick={onClick} onChange={onChange} />
       <ResultsDisplay/>
       
     </div>
