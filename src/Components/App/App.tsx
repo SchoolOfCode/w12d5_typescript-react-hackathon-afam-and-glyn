@@ -34,6 +34,7 @@ const fetchData = async () => {
   }
 }
 
+
 useEffect(()=>{
 fetchData()
  },[] )
