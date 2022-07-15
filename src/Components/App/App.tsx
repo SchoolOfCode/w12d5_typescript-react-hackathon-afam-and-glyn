@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import {useState} from 'react'
 import './App.css';
-import SearchBar from '../SearchBar';
+//import SearchBar from '../SearchBar';
+import SubmitButton from '../SubmitButton';
+import InputBox from '../InputBox';
 import ResultsDisplay from '../ResultsDisplay';
 export type onClickType = {onClick: (e: React.MouseEvent<HTMLButtonElement>) => void}
 export type onChangeType = {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void}
@@ -16,7 +18,9 @@ function onChange(e: React.ChangeEvent<HTMLInputElement>): void{
 }
 
 function onClick (e: React.MouseEvent<HTMLButtonElement>):void{
+  setCity(search)
   fetchData()
+
 }
 
 const fetchData = async () => {
@@ -41,8 +45,9 @@ fetchData()
       <header className="App-header">
         <h1>Weather Type Script</h1>
       </header>
-      <SearchBar onClick={onClick} onChange={onChange} />
-      <ResultsDisplay/>
+      <InputBox onChange={onChange}/>
+      <SubmitButton onClick={onClick}  />
+      <ResultsDisplay data={weatherData}/>
       
     </div>
   );
