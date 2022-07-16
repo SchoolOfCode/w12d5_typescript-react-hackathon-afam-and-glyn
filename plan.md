@@ -17,6 +17,8 @@ Sprints
 
 
 
+
+
 ### Planning and documentation
 
 - Before coding your app, you should use the draw.io VS code extension to create a component tree diagram within this repository.

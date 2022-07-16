@@ -20,7 +20,6 @@ function onChange(e: React.ChangeEvent<HTMLInputElement>): void{
 function onClick (e: React.MouseEvent<HTMLButtonElement>):void{
   setCity(search)
   fetchData()
-
 }
 
 const fetchData = async () => {
@@ -29,6 +28,7 @@ const fetchData = async () => {
     const response = await fetch(url);
     const data = await response.json();
     setWeatherData(data);
+    console.log(weatherData)
   } catch (error) {
     console.log('error', error);
   }
